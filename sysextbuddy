@@ -223,7 +223,7 @@ if [[ "${SYSEXTBUDDY_FORCE_SELINUX}" == 1 || -e '/sys/fs/selinux/status' ]]; the
   chcon --user=system_u --recursive "${SYSEXTBUDDY_WORKING_DIRECTORY}"
 fi
 
-mkfs.erofs "${SYSEXTBUDDY_OUTPUT_FILE}" "${SYSEXTBUDDY_WORKING_DIRECTORY}" >/dev/null
+mkfs.erofs --all-root "${SYSEXTBUDDY_OUTPUT_FILE}" "${SYSEXTBUDDY_WORKING_DIRECTORY}" >/dev/null
 
 output_file_path="$(realpath "${SYSEXTBUDDY_OUTPUT_FILE}")"
 echo "INFO: Sysext generated successfully at ${output_file_path}"
