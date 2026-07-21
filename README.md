@@ -32,3 +32,20 @@ Example usage:
 
 - <https://github.com/fedora-sysexts/fedora> - This is where I got most of the code, also SELinux support
 - <https://gitlab.gnome.org/tchx84/sysext-utils> - Where the idea for this project came from!
+
+## Installation
+
+Clone this git repository somewhere in your filesystem
+
+```bash
+mkdir -p "${HOME}/opt/tulilirockz"
+git clone "https://github.com/tulilirockz/sysextbuddy" "${HOME}/opt/tulilirockz/sysextbuddy"
+```
+
+Then you can symlink the sysextbuddy script into somewhere in your `$PATH` variable:
+
+```bash
+ln -s "${PWD}/sysextbuddy" "${HOME}/.local/bin/sysextbuddy"
+```
+
+This allows you to get updates by `git pull`.
